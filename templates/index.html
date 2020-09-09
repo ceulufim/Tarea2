@@ -1,0 +1,34 @@
+{% extends "base.html" %} {% block content %}
+
+<h2>El sistema de Optimizaión automáticamente captura la imagen del vehículo que viene por la autopista</h2>
+<h2>donde lo reconoce y orienta a la fila que le corresponde.</h2>
+
+<img src="https://www.fmdos.cl/wp-content/uploads/2016/08/Ruta-5-taco-1-750x500.jpg" alt="texto alternativo de la imagen" width="640" height="480">
+
+<div>
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label">
+            Subir
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+    <div class="image-section" style="display:none;">
+        <div class="img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">¡Predecir!</button>
+        </div>
+    </div>
+
+    <div class="loader" style="display:none;"></div>
+
+    <h3 id="result">
+        <span> </span>
+    </h3>
+
+</div>
+
+{% endblock %}
